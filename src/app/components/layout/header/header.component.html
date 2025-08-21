@@ -21,6 +21,14 @@
                     <a class="nav-link" routerLink="/faq" routerLinkActive="active" ariaCurrentWhenActive="page">FAQ's</a>
                 </li>
             </ul>
+            <div class="d-flex">                
+                @if(isLoggedIn()) {
+                    <button class="btn btn-secondary rounded-5" (click)="profile()">Profile</button>
+                    <button class="btn btn-secondary rounded-5" (click)="logout()">Logout</button>
+                } @else {
+                    <button class="btn btn-secondary rounded-5" (click)="login()">Login</button>
+                }
+            </div>
         </div>
     </div>
 </nav>
