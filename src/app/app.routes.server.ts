@@ -24,6 +24,10 @@ export const serverRoutes: ServerRoute[] = [
     status: HttpStatusCode.NotFound,
     headers: {
       'Cache-Control': 'no-cache',
+
+      //to stop indexing of this page/route via http header
+      //(source: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#xrobotstag)
+      'X-Robots-Tag': 'noindex, nofollow',
     },
   },
   {
